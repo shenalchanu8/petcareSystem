@@ -1,0 +1,101 @@
+<<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Pet registration form</title>
+        <meta name = "viewport" content="width=device-width,initial-scale = 1.0"/>
+        <link rel="stylesheet" href="pet registration .css">
+    </head>
+    <body>
+        
+        <section class="header" id="header">
+
+            <a href="#"><img src="logo.png" style="width: 100px; height: 100px;"></a>
+
+            <nav class="navbar">
+                <a href="home.html"><i class='bx bxs-home'></i>Home</a>
+
+                <a href="login.html"><i class='bx bxs-login'></i>Login</a>
+                <a href="store.html"><i class='bx bxs-store'></i>Store</a>
+                <a href="services.html"><i class='bx bxs-dog'></i>Our services</a>
+                <a href="pet registration.html"><i class='bx bxs-aboutpet'></i>About Pet</a>
+                <a href="aboutus.html"><i class='bx bxs-whyus'></i>Why us</a>
+                <a href="accountsettings.html"><i class='bx bxs-settings'></i>Settings</a>
+
+            </nav>
+
+            <div id="menu-btn" class="fas fa-bars"></div>
+
+        </section>
+
+        <div class="col-12">
+            <nav class="nav1" style="background-color: #dbdbdb;">
+                <a id="n1" class="nav2" style="background-color: #bababa;" href="pet registration.html">Pet Registration</a>
+                <a id="n2" class="nav2" style="background-color: #bababa;" href="healthupdates.html">Health Updates</a>
+                <a id="n3" class="nav2" style="background-color: #bababa;" href="training.html">Training Guidlines</a>
+            </nav>
+        </div>
+
+        <div class="wrapper">
+            <div class="inner">
+                <div class="image-holder">
+                    <img src="pr.jpeg" alt="">
+                </div>
+                <form action="pet_registration.php" method="post">
+                    <h3>PET registration</h3>
+                    <div class="form wrapper">
+                        <input name="name" type="text" placeholder="Name of the pet" class="form-control">
+
+                    </div>
+                    <div class="form wrapper">
+                        <input name="dob" type="date" placeholder="Date of birth" class="form-control">
+
+
+                    </div>
+                    <div class="form wrapper">
+                        <select name="sex" id="ss" class="form-control">
+                            <option value="" disabled selected>Sex</option>
+                            <option value="male">Male</option>
+                            <option value="Female">Female</option>
+
+                        </select>
+
+
+
+                    </div>
+                    <div class="form wrapper">
+
+                        <input name="breed" type="text" placeholder="Breed" class="form-control">
+                    </div>
+
+                    <input name="owner_address" type="text" placeholder="Owner/Address" class="form-control">
+                    <div class="form wrapper">
+
+                        <input name="identification_number" type="text" placeholder="Identification number" class="form-control">
+
+                    </div>
+                    <button>Register</button>
+                </form>
+
+                <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="toggleSuccess()">&times;</div>
+                        <h1>Thank You</h1>
+                        <p>Dear Customer, your pet details have been stored</p>
+                    </div>
+                </div>
+                <div class="popup" id="popup-0">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="toggleFail()">&times;</div>
+                        <h1>Thank You</h1>
+                        <p>Registration Failed</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="petregistration.js"></script>
+    </body>
+</html>
